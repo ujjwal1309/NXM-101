@@ -1,24 +1,5 @@
-function runProgram(input) {
-    // Write code here
-   
-  }
-  if (process.env.USERNAME=== "ujjwa") {
-    runProgram(``);
-  } else {
-    process.stdin.resume();
-    process.stdin.setEncoding("ascii");
-    let read = "";
-    process.stdin.on("data", function (input) {
-      read += input;
-    });
-    process.stdin.on("end", function () {
-      read = read.replace(/\n$/, "");
-      read = read.replace(/\n$/, "");
-      runProgram(read);
-    });
-    process.on("SIGINT", function () {
-      read = read.replace(/\n$/, "");
-      runProgram(read);
-      process.exit(0) ;
-    });
-  }
+const {sum,diff,multiply}=require("./2");
+
+sum(2,2)
+diff(2,2);
+multiply(2,2);
