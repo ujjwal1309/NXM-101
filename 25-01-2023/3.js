@@ -1,7 +1,6 @@
-const os = require('os')
+const fs=require('fs')
+const name='read.txt';
 
-console.log(os.hostname())
+let data=fs.readFileSync(name);
 
-const x=10;
-x='aab'
-console.log(x)
+console.log(data);
