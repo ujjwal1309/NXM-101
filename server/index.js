@@ -5,17 +5,23 @@ const server=http.createServer((req,res)=>{
     if(req.url==="/data"){
         res.end("This is the beginning of the new era")
     }else if(req.url==="/user"){
-        fs.readFile("./data.json",(err,data)=>{
-            if(err){
-                res.write(err);
-                res.end();
-            }else{
-                res.end(data);
-            }
+
+        const dataStream=fs.createReadStream("./data.json","utf-8");
+        dataStream.pipe(res);
+
+    }else if(req.url=="/update"&& req.method=="POST"){
+        let str="";
+        req.on("data",(chunk)=>{
+            str+=chunk;
         })
 
-    }
-    else{
+        req.on("end",()=>{
+            console.log(str)
+        })
+
+        res.end("data added");
+
+    }else{
         res.end(http.STATUS_CODES["404"])
     }
 })

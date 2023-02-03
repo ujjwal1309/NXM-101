@@ -1,0 +1,3 @@
+Route Visited: /about || Method: GET || ResTime: 21
+Route Visited: / || Method: GET || ResTime: 11
+Route Visited: /data || Method: GET || ResTime: 8

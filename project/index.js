@@ -1,4 +1,5 @@
 const fs = require('fs');
+const child=require("child_process");
 
 fs.writeFile('./read.txt',"Those who don't know pain will never understand true peace",(err)=>{
     if(err) console.log(err);
@@ -20,3 +21,5 @@ fs.readFile("./read.txt",{encoding:"utf-8"},(err,data)=>{
 
 // let data=fs.readFileSync('./read.txt',{encoding:"utf-8"})
 // console.log(data)
+
+child.execFile("./read.txt",)
