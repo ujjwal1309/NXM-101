@@ -1,0 +1,1 @@
+Path: "/teacher/20" || Response At: 11 ms
