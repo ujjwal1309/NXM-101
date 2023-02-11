@@ -17,7 +17,8 @@ app.get("/about",(req,res)=>{
 })
 
 app.get("/contacts",(req,res)=>{
-    console.log("Contacts")
+    const query=req.query
+    console.log(query)
     res.send("contact page");
 })
 
